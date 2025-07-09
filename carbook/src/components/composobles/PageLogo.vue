@@ -17,12 +17,18 @@ export default {
         const handleScroll = () => {
             isScrolled.value = window.scrollY > 50;
         };
-
+        const handleResize = () => {
+            isMobile.value = window.innerWidth < 760;
+        };
         onMounted(() => {
             window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', handleResize);
+
             });
             onBeforeMount(() => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+
             });
             const carClass = computed( () =>{
                 if(isMobile.value) return "text-black";
