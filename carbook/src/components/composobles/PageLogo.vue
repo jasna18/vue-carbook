@@ -2,7 +2,7 @@
   <router-link to="/">
     <h1 class="text-xl font-bold cursor-pointer">
         <span :class="carClass">CAR</span>
-        <span>BOOK</span>
+        <span class="text-green-500" >BOOK</span>
     </h1>
     </router-link>
 </template>
@@ -13,9 +13,11 @@ export default {
     setup() {
         const isScrolled = ref(false);
         const isMobile = ref(window.innerWidth < 760);
+
         const handleScroll = () => {
             isScrolled.value = window.scrollY > 50;
         };
+
         onMounted(() => {
             window.addEventListener('scroll', handleScroll);
             });
