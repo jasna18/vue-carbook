@@ -1,8 +1,8 @@
 <template>
-<header>
-    <div>    
+<header class="flex justify-center px-6">
+    <div class="flex justify-between items-center w-full md:w-5/6 md-relative z-50">    
         <PageLogo/>
-        <nav>
+        <nav class="space-x-6">
             <router-link
                 v-for="link in links"
                 :key="link.path"
