@@ -11,12 +11,16 @@ import bgImage from "../../assets/images/bg_1.png";
 </div>
     </section>
 </template>
-    <style scoped>
-    section.bg-cover {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        width: 100vw;
-    }
-    </style>
+<style scoped>
+section.bg-cover {
+    /* Custom CSS for fallback or extra styles */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+}
+</style>
