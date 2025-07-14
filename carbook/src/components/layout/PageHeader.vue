@@ -1,8 +1,10 @@
 <template>
-<header class="flex justify-center px-6 z-50 fixed w-full top-0 p-2">
+<header 
+:class="headerClass"
+class="flex justify-center px-6 z-50 fixed w-full top-0 p-2 bg-white drop-shadow-sm">
     <div class="flex justify-between items-center w-full md:w-5/6 md-relative z-50">    
         <PageLogo/>
-        <nav class="space-x-6 hidden md-flex">
+        <nav class="space-x-6 hidden md:flex">
             <router-link
                 v-for="link in links"
                 :key="link.path"
@@ -14,7 +16,8 @@
         </nav>
         <!-- mobile hamberger menu -->
          <div class="flex md:hidden">
-            <button @click="toggleMenu">
+            <button @click="toggleMenu" class="text-gray-800 focus:outline-none"
+            aria-label="Toggle mobile menu">
                 <FaBarsStaggered/>
             </button>
             <div v-if="menuVisible" class="absolute top-16 left-0 bg-white shadow-lg w-full p-4
@@ -23,7 +26,7 @@
                 :key="link.path"
                 :to="link.path"
                 :class="{ 'active-link': $route.path === link.path }"
-                @click="menuVisible = false"
+                @click="closeMenu"
                 >
                 {{ link.name }}
                 </router-link>
@@ -45,6 +48,9 @@ const menuVisible = ref(false)
 
 const toggleMenu = () => {
     menuVisible.value = !menuVisible.value;
+};
+const closeMenu = () => {
+    menuVisible.value = false;
 };
 const links = [
     { name: 'Home', path: '/' },
