@@ -7,7 +7,7 @@
       class="flex justify-between items-center w-full md:w-5/6 md-relative z-50"
     >
       <PageLogo />
-      <nav class="space-x-6 hidden md:flex">
+      <nav :class="{'scrolled-nav' :isScrolled }" class="space-x-6 hidden md:flex">
         <router-link
           v-for="link in links"
           :key="link.path"
@@ -97,5 +97,8 @@ nav a {
 nav a.active-link {
   color: #10b981; /* Tailwind's indigo-600 */
   font-weight: bold;
+}
+nav.scrolled-nav a{
+  color:black !important;
 }
 </style>
