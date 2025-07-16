@@ -94,11 +94,12 @@ nav a {
   color: white;
   transition: color 0.3s ease;
 }
+nav.scrolled-nav a{
+  color:black !important;
+}
 nav a.active-link {
   color: #10b981; /* Tailwind's indigo-600 */
   font-weight: bold;
 }
-nav.scrolled-nav a{
-  color:black !important;
-}
+
 </style>
