@@ -1,30 +1,27 @@
 <template>
-<div class="min-h-screen flex flex-col relative">
-    
+  <div class="min-h-screen flex flex-col relative">
     <!-- header -->
     <PageHeader />
 
     <!-- main  -->
     <main class="flex-grow">
-        <router-view></router-view>
+      <router-view></router-view>
     </main>
 
     <!-- footer -->
     <PageFooter />
-</div>
+  </div>
 </template>
 
 <script>
-import PageHeader from './PageHeader.vue'
-import PageFooter from './PageFooter.vue'
+import PageHeader from "./PageHeader.vue";
+import PageFooter from "./PageFooter.vue";
 export default {
-components: {
+  components: {
     PageHeader,
-    PageFooter
-}
-}
+    PageFooter,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
