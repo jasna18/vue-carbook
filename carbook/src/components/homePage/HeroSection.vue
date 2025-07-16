@@ -1,6 +1,4 @@
-<script setup>
-import bgImage from "../../assets/images/bg_1.png";
-</script>
+
 
 <template>
   <section
@@ -11,7 +9,7 @@ import bgImage from "../../assets/images/bg_1.png";
     <div
       class="relative flex items-center justify-center h-full text-center text-white px-4"
     >
-      <div class="w-full md:w-3/5">
+      <div class="w-full md:w-3/5 content-wrapper"  :class="{ 'animate-in': isVisible }">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">
           Fast & Easy way to rent a car
         </h1>
@@ -25,6 +23,18 @@ import bgImage from "../../assets/images/bg_1.png";
     </div>
   </section>
 </template>
+
+<script setup>
+import bgImage from "../../assets/images/bg_1.png";
+import { ref, onMounted } from "vue";
+const isVisible = ref(false);
+onMounted(()=>{
+  setTimeout(() => {
+    isVisible.value = true;
+  }, 100);
+})
+
+</script>
 <style scoped>
 section.bg-cover {
   /* Custom CSS for fallback or extra styles */
@@ -36,5 +46,14 @@ section.bg-cover {
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100vw;
+}
+.content-wrapper {
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.content-wrapper.animate-in {
+  transform: translateY(0);
+  opacity: 1;
 }
 </style>
