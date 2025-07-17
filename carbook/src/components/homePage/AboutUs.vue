@@ -14,15 +14,16 @@
                 <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                     minim veniam, quis nostrud exercitation ullamco laboris</p>
+                <ButtonComponent text="Search Vehicle"/>
+
             </div>
         </div>
     </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import ButtonComponent from '../composobles/ButtonComponent.vue'
 
-}
 </script>
 
 <style></style>
