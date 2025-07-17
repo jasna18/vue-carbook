@@ -1,6 +1,6 @@
 <template>
-    <div class="relative w-full h-screen">
-        <div class="sm:absolute bg-[#10b981] w-full sm:w-2/3 md:h-[92%] top-0 right-0">
+    <div class="relative w-full md:h-screen">
+        <div class="sm:absolute bg-[#10b981] w-full sm:w-2/3 md:h-[92%] top-0 right-0 sm:top-0">
             <div class="sm:absolute -inset-x-1/5 inset-y-20 mb-4 md:mb-0">
                 <img src="../../assets/images/bg_3.jpg" alt="" class="md:max-w-[32rem] h-auto object-cover">
             </div>

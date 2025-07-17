@@ -19,7 +19,7 @@
           slidesPerView: 3,
         },
       }"
-      class=" w-4/5 drop-shadow-2xl"
+      class="w-4/5 drop-shadow-2xl"
       >
         <swiper-slide v-for="(car, index) in cars" :key="index">
           <CarCard
