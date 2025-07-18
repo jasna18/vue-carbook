@@ -1,11 +1,10 @@
 <template>
   <div class="md:bg-gray-100/90">
     <SectionHeading title="Happy Clients" description="Testimonial"/>
-<section>
+<section class="py-10 md:py-20 p-4">
      <swiper
       :modules ="[Autoplay]"
       :space-between="30"
-      navigation
       loop
       :autoplay="{ delay: 3000, disableOnInteraction: false }"
       :breakpoints="{

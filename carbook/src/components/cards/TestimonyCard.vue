@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <img :src="getImage(image)" :alt="name"  class="" />
-    <p>{{ comment }}</p>
-    <h2>{{ name }}</h2>
-    <p>{{ position }}</p>
+  <div class="flex flex-col items-center bg-white shadow-lg rounded-lg p-5 h-96 text-center">
+    <img :src="getImage(image)" :alt="name"  class="w-24 h-24 rounded-full object-cover mb-4" />
+    <p class="text-gray-400 text-md ny-3">{{ comment }}</p>
+    <h2 class="text-xl font-semibold ">{{ name }}</h2>
+    <p class="text-blue text-md-500">{{ position }}</p>
   </div>
 </template>
 
