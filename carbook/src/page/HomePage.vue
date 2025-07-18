@@ -6,6 +6,7 @@
     <ServiceList />
     <CalltoAction />
     <TestimonySection/>
+    <BlogSection />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import AboutUs from "../components/homePage/AboutUs.vue";
 import ServiceList from "../components/homePage/ServiceList.vue";
 import CalltoAction from "../components/homePage/CalltoAction.vue";
 import TestimonySection from "../components/homePage/TestimonySection.vue";
+import BlogSection from "../components/homePage/BlogSection.vue";
 </script>
 
 <style></style>
