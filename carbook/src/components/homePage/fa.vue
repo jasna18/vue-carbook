@@ -1,30 +1,39 @@
 <template>
   <div>
-  <SectionHeading description="What we offer" title="Featured Vechicles" />
-  <div class="w-full h-full py-10 md:py-20">
-    <swiper
-      :modules="[Autoplay]"
-      :space-between="30"
+    <SectionHeading description="what we offer" title="Featured Vehicles" />
+    <div class="w-full h-full px-50 py-10 md:py-20">
+      <swiper
+      :modules ="[Autoplay]"
+      :space-between="100"
       navigation
       loop
       :autoplay="{ delay: 3000, disableOnInteraction: false }"
       :breakpoints="{
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
+        640: {
+          slidesPerView: 2,
+        },
+        // 768: {
+        //   slidesPerView: 2,
+        // },
+        1024: {
+          slidesPerView: 3,
+        },
       }"
       class="w-4/5 drop-shadow-2xl"
-    >
-      <swiper-slide v-for="(car, index) in cars" :key="index">
-        <CarCard
-          :id="car.id"
-          :name="car.name"
-          :brand="car.brand"
-          :price="car.price"
-          :image="car.image"
-        />
-      </swiper-slide>
-    </swiper>
-  </div>
+      >
+        <swiper-slide v-for="(car, index) in cars" :key="index">
+          <CarCard
+            :id="car.id"
+            :name="car.name"
+            :brand="car.brand"
+            :price="car.price"
+            :image="car.image"
+          />
+        </swiper-slide>
+      </swiper>
+
+    </div>
+    <!-- Removed extra CarCards component outside the loop -->
   </div>
 </template>
 
