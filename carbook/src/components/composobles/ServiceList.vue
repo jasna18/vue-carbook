@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import SectionHeading from "../composobles/SectionHeading.vue";
+import SectionHeading from "./SectionHeading.vue";
 import { ref } from "vue";
 import { AkHeart, IcCity, MaAirport } from "@kalimahapps/vue-icons";
 
